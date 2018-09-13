@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*
+ * @Author: likang xie 
+ * @Date: 2018-08-14 19:14:30 
+ * @Purpose: 主题
+ */
+.cr-main {
+  color: #ff2d50;
+}
+
+.bcr-main {
+  background-color: #ff2d50;
+}
+
+.cr-black {
+  color: #53565d;
+}
+
+.bcr-black {
+  background-color: #53565d;
+}
+
+.cr-basic {
+  color: #71777d;
+}
+
+.bcr-basic {
+  background-color: #71777d;
+}

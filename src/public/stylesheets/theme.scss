@@ -1,0 +1,18 @@
+/*
+ * @Author: likang xie 
+ * @Date: 2018-08-14 19:14:30 
+ * @Purpose: 主题
+ */
+
+$main: #ff2d50;
+$black: #53565d;
+$basic: #71777d;
+@each $name,
+$color in (main:$main, black:$black, basic:$basic) {
+  .cr-#{$name} {
+    color: $color
+  }
+  .bcr-#{$name} {
+    background-color: $color
+  }
+}

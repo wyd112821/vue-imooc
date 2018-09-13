@@ -1,0 +1,143 @@
+/*
+ * @Author: likang xie 
+ * @Date: 2018-08-14 19:13:33 
+ * @Purpose: 公共样式、主题、工具类
+ */
+@import 'theme.scss',
+'util.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  font-size: 10px;
+}
+
+html {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  font-size: 10px;
+  color: $black;
+
+  body {
+    height: 100vh;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: $black;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    font-size: 1.4rem;
+    border-radius: 0;
+    transition: all .3s ease;
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  #app {
+    font-size: 1.4rem;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .header,
+  .footer {
+    position: fixed;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    background-color: #fff;
+    box-shadow: 0 0 1rem 0.1rem rgba($color: #313131, $alpha: 0.1);
+  }
+
+  .header {
+    top: 0;
+  }
+
+  .footer {
+    bottom: 0;
+  }
+
+  .circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    background-color: $main;
+    z-index: 4;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(220, 4%, 58%, .3);
+  border-radius: 1rem;
+}
+
+// 过渡动画
+.slidedown-enter-active {
+  animation: bounce-in 0.3s;
+}
+
+.slidedown-leave-active {
+  animation: bounce-in 0.3s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slideright-enter-active {
+  animation: bounce-right 0.3s;
+}
+
+.slideright-leave-active {
+  animation: bounce-right 0.3s reverse;
+}
+
+@keyframes bounce-right {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
